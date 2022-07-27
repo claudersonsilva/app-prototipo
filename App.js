@@ -1,19 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
 
-import StartScreen from './src/components/StartScreen';
+import StartScreen from './src/screens/StartScreen/';
 
 export default function App() {
   return (
     <StartScreen />
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+};
