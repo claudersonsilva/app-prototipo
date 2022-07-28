@@ -11,12 +11,9 @@ export default () => {
             </HeaderArea>
 
             <BodyArea>
-                <Title1>ESCOLHA COMO CONTINUAR</Title1>
+                <Title1>O JEITO MAIS FÁCIL DE COMPRAR</Title1>
                 <ButtonPrimary>
-                    <ButtonPrimaryText>RECEBER EM CASA</ButtonPrimaryText>
-                </ButtonPrimary>
-                <ButtonPrimary>
-                    <ButtonPrimaryText>RETIRAR NO ESTABELECIMENTO</ButtonPrimaryText>
+                    <ButtonPrimaryText>INICIAR NOVA COMPRA</ButtonPrimaryText>
                 </ButtonPrimary>
             </BodyArea>
 
