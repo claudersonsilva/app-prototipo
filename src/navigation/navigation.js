@@ -3,6 +3,8 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from '@react-navigation/native';
 
+import Ionicons from '@expo/vector-icons/Ionicons';
+
 //Screens
 import Home from './../screens/home';
 import DeliveryAddress from './../screens/delivery-address';
@@ -29,6 +31,9 @@ function MyTabs() {
                     tabBarLabelStyle:{
                         fontWeight: 'bold',
                         fontSize: 14,
+                    },
+                    tabBarIcon: ({color, size}) =>{
+                        return <Ionicons name="md-home-outline" size={size} color={color} />;
                     }
                 }}
             >
@@ -50,6 +55,9 @@ function MyTabs() {
                     tabBarLabelStyle:{
                         fontWeight: 'bold',
                         fontSize: 14,
+                    },
+                    tabBarIcon: ({color, size}) =>{
+                        return <Ionicons name="md-person-circle-outline" size={size} color={color} />;
                     }
                 }}
             ></Tab.Screen>
@@ -70,6 +78,9 @@ function MyTabs() {
                     tabBarLabelStyle:{
                         fontWeight: 'bold',
                         fontSize: 14,
+                    },
+                    tabBarIcon: ({color, size}) =>{
+                        return <Ionicons name="md-call-outline" size={size} color={color} />;
                     }
                 }}
             ></Tab.Screen>
