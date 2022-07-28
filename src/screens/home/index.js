@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { Container, HeaderArea, BodyArea, FooterArea, ButtonPrimary, Title1, Title2, ButtonPrimaryText, Logo } from './styles';
+import { Container } from '../../global-styles/styles';
+import { HeaderArea, BodyArea, FooterArea, ButtonPrimary, Title1, Title2, ButtonPrimaryText, Logo } from './styles';
 
 export default () => {
     return (
         <Container>
             <HeaderArea>
-                <Logo source={require('./../../../assets/logo_size.jpg')}></Logo>
+                <Logo source={require('./../../../assets/icon.png')}></Logo>
             </HeaderArea>
 
             <BodyArea>
-                <Title1>Vamos as compras</Title1>
-                <Title2>Como deseja proceder?</Title2>
+                <Title1>ESCOLHA COMO CONTINUAR</Title1>
                 <ButtonPrimary>
                     <ButtonPrimaryText>RECEBER EM CASA</ButtonPrimaryText>
                 </ButtonPrimary>

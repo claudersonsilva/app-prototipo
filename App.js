@@ -1,9 +1,11 @@
 import React from 'react'
 
-import StartScreen from './src/screens/StartScreen/';
+import Navigation from './src/navigation/navigation';
+
+
 
 export default function App() {
   return (
-    <StartScreen />
+    <Navigation />
   );
 };

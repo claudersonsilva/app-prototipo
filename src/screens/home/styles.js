@@ -3,9 +3,9 @@ import styled from "styled-components/native";
 
 export const Container = styled.SafeAreaView`
     flex: 1;
-    background-color: #fff;
+    background-color: #FFF;
     padding: 50px;
-    justify-content: center;
+    justify-content: space-around;
 `
 export const HeaderArea  =styled.View`
     width: 100%;
@@ -22,18 +22,18 @@ export const FooterArea  =styled.View`
     justify-content: center;
 `
 export const Logo = styled.Image`
-    width: 192px;
-    height: 192px;
+    width: 160px;
+    height: 160px;
 `
 export const Title1 = styled.Text`
-    font-size: 25px;
-    font-weight: 900;
-    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 `
 export const Title2 = styled.Text`
-    font-size: 15px;
-    font-weight: 600;
-    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 `
 export const ButtonPrimary = styled.TouchableOpacity`
     background-color: #f05742;
@@ -44,6 +44,6 @@ export const ButtonPrimary = styled.TouchableOpacity`
 export const ButtonPrimaryText = styled.Text`
     text-align: center;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
 `
