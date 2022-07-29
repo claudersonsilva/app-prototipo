@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Container } from '../../global-styles/styles';
-import { HeaderArea, BodyArea, FooterArea, ButtonPrimary, Title1, Title2, ButtonPrimaryText, Logo } from './styles';
+import { Container, HeaderArea, BodyArea, ButtonPrimary, Title, ButtonPrimaryText, Logo } from './styles';
 
 export default () => {
     return (
@@ -11,7 +10,7 @@ export default () => {
             </HeaderArea>
 
             <BodyArea>
-                <Title1>O JEITO MAIS FÁCIL DE COMPRAR</Title1>
+                <Title>O JEITO MAIS FÁCIL DE COMPRAR</Title>
                 <ButtonPrimary>
                     <ButtonPrimaryText>INICIAR NOVA COMPRA</ButtonPrimaryText>
                 </ButtonPrimary>

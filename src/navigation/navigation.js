@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from '@react-navigation/native';
 
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { RFPercentage } from "react-native-responsive-fontsize";
 
 //Screens
 import Home from './../screens/home';
@@ -30,12 +31,14 @@ function AccountStack(){
                 options={{
                     headerTitle: 'MEUS DADOS',
                     headerTitleAlign: 'center',
+                    headerBackTitleVisible: false,
                     headerStyle: {
                         backgroundColor: '#F05742',
                     },
-                    headerTintColor: '#fff',
+                    headerTintColor: '#FFF',
                     headerTitleStyle: {
-                        fontWeight: 'bold',
+                        fontFamily: 'Montserrat_700Bold',
+                        fontSize: RFPercentage(2.3),
                     }
                 }}
             />
@@ -45,12 +48,14 @@ function AccountStack(){
                 options={{
                     headerTitle: 'HISTÓRICO DE PEDIDOS',
                     headerTitleAlign: 'center',
+                    headerBackTitleVisible: false,
                     headerStyle: {
                         backgroundColor: '#F05742',
                     },
-                    headerTintColor: '#fff',
+                    headerTintColor: '#FFF',
                     headerTitleStyle: {
-                        fontWeight: 'bold',
+                        fontFamily: 'Montserrat_700Bold',
+                        fontSize: RFPercentage(2.3),
                     }
                 }}
             />
@@ -60,12 +65,14 @@ function AccountStack(){
                 options={{
                     headerTitle: 'POLÍTICA DE PRIVACIDADE',
                     headerTitleAlign: 'center',
+                    headerBackTitleVisible: false,
                     headerStyle: {
                         backgroundColor: '#F05742',
                     },
-                    headerTintColor: '#fff',
+                    headerTintColor: '#FFF',
                     headerTitleStyle: {
-                        fontWeight: 'bold',
+                        fontFamily: 'Montserrat_700Bold',
+                        fontSize: RFPercentage(2.3),
                     }
                 }}
             />
@@ -75,12 +82,14 @@ function AccountStack(){
                 options={{
                     headerTitle: 'FAQ',
                     headerTitleAlign: 'center',
+                    headerBackTitleVisible: false,
                     headerStyle: {
                         backgroundColor: '#F05742',
                     },
-                    headerTintColor: '#fff',
+                    headerTintColor: '#FFF',
                     headerTitleStyle: {
-                        fontWeight: 'bold',
+                        fontFamily: 'Montserrat_700Bold',
+                        fontSize: RFPercentage(2.3),
                     }
                 }}
             />
@@ -90,12 +99,14 @@ function AccountStack(){
                 options={{
                     headerTitle: 'ATUALIZAR PERFIL',
                     headerTitleAlign: 'center',
+                    headerBackTitleVisible: false,
                     headerStyle: {
                         backgroundColor: '#F05742',
                     },
-                    headerTintColor: '#fff',
+                    headerTintColor: '#FFF',
                     headerTitleStyle: {
-                        fontWeight: 'bold',
+                        fontFamily: 'Montserrat_700Bold',
+                        fontSize: RFPercentage(2.3),
                     }
                 }}
             />
@@ -118,11 +129,11 @@ function MyTabs() {
                     headerShown: false,
                     tabBarLabel: "INÍCIO",
                     tabBarLabelStyle:{
-                        fontWeight: 'bold',
-                        fontSize: 14,
+                        fontFamily: 'Montserrat_700Bold',
+                        fontSize: RFPercentage(1.8),
                     },
                     tabBarIcon: ({color, size}) =>{
-                        return <Ionicons name="md-home-outline" size={size} color={color} />;
+                        return <Ionicons name="md-home-outline" size={RFPercentage(4)} color={color} />;
                     }
                 }}
             >
@@ -135,19 +146,19 @@ function MyTabs() {
                     headerTitle: 'MEUS DADOS',
                     headerTitleAlign: 'center',
                     headerStyle: {
-                        backgroundColor: '#fff',
+                        backgroundColor: '#FFF',
                     },
-                    headerTintColor: '#fff',
+                    headerTintColor: '#FFF',
                     headerTitleStyle: {
-                        fontWeight: 'bold',
+                        fontFamily: 'Montserrat_700Bold',
                     },
                     tabBarLabel: "MEUS DADOS",
                     tabBarLabelStyle:{
-                        fontWeight: 'bold',
-                        fontSize: 14,
+                        fontFamily: 'Montserrat_700Bold',
+                        fontSize: RFPercentage(1.8),
                     },
                     tabBarIcon: ({color, size}) =>{
-                        return <Ionicons name="md-person-circle-outline" size={size} color={color} />;
+                        return <Ionicons name="md-person-circle-outline" size={RFPercentage(4)} color={color} />;
                     }
                 }}
             ></Tab.Screen>
@@ -162,15 +173,15 @@ function MyTabs() {
                     },
                     headerTintColor: '#fff',
                     headerTitleStyle: {
-                        fontWeight: 'bold',
+                        fontFamily: 'Montserrat_700Bold',
                     },
                     tabBarLabel: "FALE CONOSCO",
                     tabBarLabelStyle:{
-                        fontWeight: 'bold',
-                        fontSize: 14,
+                        fontFamily: 'Montserrat_700Bold',
+                        fontSize: RFPercentage(1.8),
                     },
                     tabBarIcon: ({color, size}) =>{
-                        return <Ionicons name="md-call-outline" size={size} color={color} />;
+                        return <Ionicons name="md-call-outline" size={RFPercentage(4)} color={color} />;
                     }
                 }}
             ></Tab.Screen>
