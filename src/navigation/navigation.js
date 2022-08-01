@@ -16,10 +16,12 @@ import OrderHistoryScreen from './../screens/order-history';
 import PrivatePolicyScreen from './../screens/privacy-policy';
 import HelpScreen from './../screens/help';
 import ContactScreen from './../screens/contact';
+import NewOrderScreen from './../screens/cart';
 import theme from "../theme";
 
 const Tab = createBottomTabNavigator();
 const AccountStackNavigator = createNativeStackNavigator();
+const NewOrderStackNavigator = createNativeStackNavigator();
 
 function AccountStack(){
     return(
@@ -115,6 +117,19 @@ function AccountStack(){
     );
 }
 
+function NewOrderStack(){
+    return (
+        <NewOrderStackNavigator.Navigator
+            initialRouteName="NewOrderScreen"
+        >
+            <NewOrderStackNavigator.Screen 
+                name="NewOrderScreen"
+                component={NewOrderScreen}
+            />
+        </NewOrderStackNavigator.Navigator>
+    );
+}
+
 function MyTabs() {
     return (
         <Tab.Navigator
@@ -139,6 +154,30 @@ function MyTabs() {
                 }}
             >
             </Tab.Screen>
+            <Tab.Screen
+                name="NewOrder"
+                component={NewOrderStack}
+                options={{
+                    headerShown: false,
+                    headerTitle: 'MEUS CartStack',
+                    headerTitleAlign: 'center',
+                    headerStyle: {
+                        backgroundColor: theme.COLORS.PRIMARY,
+                    },
+                    headerTintColor: theme.COLORS.TEXT_BRAND,
+                    headerTitleStyle: {
+                        fontFamily: theme.FONTS.BOLD,
+                    },
+                    tabBarLabel: "MEUS DADOS",
+                    tabBarLabelStyle:{
+                        fontFamily: theme.FONTS.BOLD,
+                        fontSize: RFPercentage(1.8),
+                    },
+                    tabBarIcon: ({color, size}) =>{
+                        return <Ionicons name="md-person-outline" size={RFPercentage(4)} color={color} />;
+                    }
+                }}
+            ></Tab.Screen>
             <Tab.Screen
                 name="Account"
                 component={AccountStack}

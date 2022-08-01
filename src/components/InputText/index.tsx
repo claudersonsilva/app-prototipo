@@ -16,7 +16,7 @@ export function InputText({ icon, value, ...rest }: InputProps) {
         <Ionicons
           name={icon}
           size={24}
-          color=''
+          color='#ccc'
         />
 
       <Input

@@ -1,8 +1,13 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
+import { Container, HeaderArea, BodyArea, Title, ButtonPrimaryText, Logo } from './styles';
+import { ButtonPrimary } from '../../components/ButtonPrimary';
 
-import { Container, HeaderArea, BodyArea, ButtonPrimary, Title, ButtonPrimaryText, Logo } from './styles';
+import { NewOrderScreen } from './../cart';
+
 
 export default () => {
+    const navigation = useNavigation();
     return (
         <Container>
             <HeaderArea>
@@ -11,12 +16,10 @@ export default () => {
 
             <BodyArea>
                 <Title>O JEITO MAIS FÁCIL DE COMPRAR</Title>
-                <ButtonPrimary>
+                <ButtonPrimary onPress={() => navigation.navigate('NewOrderScreen')}>
                     <ButtonPrimaryText>INICIAR NOVA COMPRA</ButtonPrimaryText>
                 </ButtonPrimary>
             </BodyArea>
-
-
         </Container>
     );
 }
