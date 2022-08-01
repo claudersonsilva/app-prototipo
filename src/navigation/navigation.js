@@ -16,6 +16,7 @@ import OrderHistoryScreen from './../screens/order-history';
 import PrivatePolicyScreen from './../screens/privacy-policy';
 import HelpScreen from './../screens/help';
 import ContactScreen from './../screens/contact';
+import theme from "../theme";
 
 const Tab = createBottomTabNavigator();
 const AccountStackNavigator = createNativeStackNavigator();
@@ -33,11 +34,11 @@ function AccountStack(){
                     headerTitleAlign: 'center',
                     headerBackTitleVisible: false,
                     headerStyle: {
-                        backgroundColor: '#F05742',
+                        backgroundColor: theme.COLORS.PRIMARY,
                     },
-                    headerTintColor: '#FFF',
+                    headerTintColor: theme.COLORS.TEXT_BRAND,
                     headerTitleStyle: {
-                        fontFamily: 'Montserrat_700Bold',
+                        fontFamily: theme.FONTS.BOLD,
                         fontSize: RFPercentage(2.3),
                     }
                 }}
@@ -50,11 +51,11 @@ function AccountStack(){
                     headerTitleAlign: 'center',
                     headerBackTitleVisible: false,
                     headerStyle: {
-                        backgroundColor: '#F05742',
+                        backgroundColor: theme.COLORS.PRIMARY,
                     },
-                    headerTintColor: '#FFF',
+                    headerTintColor: theme.COLORS.TEXT_BRAND,
                     headerTitleStyle: {
-                        fontFamily: 'Montserrat_700Bold',
+                        fontFamily: theme.FONTS.BOLD,
                         fontSize: RFPercentage(2.3),
                     }
                 }}
@@ -67,11 +68,11 @@ function AccountStack(){
                     headerTitleAlign: 'center',
                     headerBackTitleVisible: false,
                     headerStyle: {
-                        backgroundColor: '#F05742',
+                        backgroundColor: theme.COLORS.PRIMARY,
                     },
-                    headerTintColor: '#FFF',
+                    headerTintColor: theme.COLORS.TEXT_BRAND,
                     headerTitleStyle: {
-                        fontFamily: 'Montserrat_700Bold',
+                        fontFamily: theme.FONTS.BOLD,
                         fontSize: RFPercentage(2.3),
                     }
                 }}
@@ -84,11 +85,11 @@ function AccountStack(){
                     headerTitleAlign: 'center',
                     headerBackTitleVisible: false,
                     headerStyle: {
-                        backgroundColor: '#F05742',
+                        backgroundColor: theme.COLORS.PRIMARY,
                     },
-                    headerTintColor: '#FFF',
+                    headerTintColor: theme.COLORS.TEXT_BRAND,
                     headerTitleStyle: {
-                        fontFamily: 'Montserrat_700Bold',
+                        fontFamily: theme.FONTS.BOLD,
                         fontSize: RFPercentage(2.3),
                     }
                 }}
@@ -101,11 +102,11 @@ function AccountStack(){
                     headerTitleAlign: 'center',
                     headerBackTitleVisible: false,
                     headerStyle: {
-                        backgroundColor: '#F05742',
+                        backgroundColor: theme.COLORS.PRIMARY,
                     },
-                    headerTintColor: '#FFF',
+                    headerTintColor: theme.COLORS.TEXT_BRAND,
                     headerTitleStyle: {
-                        fontFamily: 'Montserrat_700Bold',
+                        fontFamily: theme.FONTS.BOLD,
                         fontSize: RFPercentage(2.3),
                     }
                 }}
@@ -119,7 +120,7 @@ function MyTabs() {
         <Tab.Navigator
             initialRouteName="Home"
             screenOptions={{
-                tabBarActiveTintColor: '#F05742'
+                tabBarActiveTintColor: theme.COLORS.PRIMARY
             }}
         >
             <Tab.Screen
@@ -129,7 +130,7 @@ function MyTabs() {
                     headerShown: false,
                     tabBarLabel: "INÍCIO",
                     tabBarLabelStyle:{
-                        fontFamily: 'Montserrat_700Bold',
+                        fontFamily: theme.FONTS.BOLD,
                         fontSize: RFPercentage(1.8),
                     },
                     tabBarIcon: ({color, size}) =>{
@@ -146,15 +147,15 @@ function MyTabs() {
                     headerTitle: 'MEUS DADOS',
                     headerTitleAlign: 'center',
                     headerStyle: {
-                        backgroundColor: '#FFF',
+                        backgroundColor: theme.COLORS.PRIMARY,
                     },
-                    headerTintColor: '#FFF',
+                    headerTintColor: theme.COLORS.TEXT_BRAND,
                     headerTitleStyle: {
-                        fontFamily: 'Montserrat_700Bold',
+                        fontFamily: theme.FONTS.BOLD,
                     },
                     tabBarLabel: "MEUS DADOS",
                     tabBarLabelStyle:{
-                        fontFamily: 'Montserrat_700Bold',
+                        fontFamily: theme.FONTS.BOLD,
                         fontSize: RFPercentage(1.8),
                     },
                     tabBarIcon: ({color, size}) =>{
@@ -169,15 +170,15 @@ function MyTabs() {
                     headerTitle: 'FALE CONOSCO',
                     headerTitleAlign: 'center',
                     headerStyle: {
-                        backgroundColor: '#F05742',
+                        backgroundColor: theme.COLORS.PRIMARY,
                     },
-                    headerTintColor: '#fff',
+                    headerTintColor: theme.COLORS.TEXT_BRAND,
                     headerTitleStyle: {
-                        fontFamily: 'Montserrat_700Bold',
+                        fontFamily: theme.FONTS.BOLD,
                     },
                     tabBarLabel: "FALE CONOSCO",
                     tabBarLabelStyle:{
-                        fontFamily: 'Montserrat_700Bold',
+                        fontFamily: theme.FONTS.BOLD,
                         fontSize: RFPercentage(1.8),
                     },
                     tabBarIcon: ({color, size}) =>{

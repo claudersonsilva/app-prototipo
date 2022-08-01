@@ -8,8 +8,8 @@ export default {
         TEXT: '#000',
     },
     FONTS: {
-        REGULAR: 'Montserrat_400Regular',
-        MEDIUM: 'Montserrat_500Medium',
-        BOLD: 'Montserrat_700Bold'
+        REGULAR: 'Montserrat-Regular',
+        MEDIUM: 'Montserrat-Medium',
+        BOLD: 'Montserrat-Bold'
     }
 }
