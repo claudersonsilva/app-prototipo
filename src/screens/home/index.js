@@ -3,8 +3,6 @@ import { useNavigation } from '@react-navigation/native';
 import { Container, HeaderArea, BodyArea, Title, ButtonPrimaryText, Logo } from './styles';
 import { ButtonPrimary } from '../../components/ButtonPrimary';
 
-import { NewOrderScreen } from './../cart';
-
 
 export default () => {
     const navigation = useNavigation();

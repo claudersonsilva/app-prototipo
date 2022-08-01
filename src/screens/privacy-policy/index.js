@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Container } from '../../global-styles/styles';
+import { Container, Title } from '../privacy-policy/styles';
 
-import { Title } from '../order-history/styles';
+
 
 export default () => {
     return (

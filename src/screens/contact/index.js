@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { Container } from '../../global-styles/styles';
 
-import { Title } from '../contact/styles';
+import { Container, Title } from '../contact/styles';
 
 export default () => {
     return (

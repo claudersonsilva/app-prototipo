@@ -8,7 +8,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { RFPercentage } from "react-native-responsive-fontsize";
 
 //Screens
-import Home from './../screens/home';
+import HomeScreen from './../screens/home';
 import DeliveryAddressScreen from './../screens/delivery-address';
 import AccountScreen from './../screens/account';
 import UpdateProfileScreen from './../screens/update-profile';
@@ -20,15 +20,167 @@ import NewOrderScreen from './../screens/cart';
 import theme from "../theme";
 
 const Tab = createBottomTabNavigator();
+const HomeTabsBottomTabNavigator = createBottomTabNavigator();
 const AccountStackNavigator = createNativeStackNavigator();
 const NewOrderStackNavigator = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
-function AccountStack(){
+function HomeTabs() {
+    return (
+        <HomeTabsBottomTabNavigator.Navigator
+            initialRouteName="HomeScreen"
+            screenOptions={{
+                tabBarActiveTintColor: theme.COLORS.PRIMARY
+            }}
+        >
+            <HomeTabsBottomTabNavigator.Screen 
+                name="HomeScreen" 
+                component={HomeScreen} 
+                options={{
+                    headerShown: false,
+                    tabBarLabel: "INÍCIO",
+                    tabBarLabelStyle: {
+                        fontFamily: theme.FONTS.BOLD,
+                        fontSize: RFPercentage(1.8),
+                    },
+                    tabBarIcon: ({ color, size }) => {
+                        return <Ionicons name="md-home-outline" size={RFPercentage(4)} color={color} />;
+                    }
+                }}
+            />
+            <HomeTabsBottomTabNavigator.Screen 
+                name="AccountScreen" 
+                component={AccountScreen} 
+                options={{
+                    headerTitle: 'MEUS DADOS',
+                    headerTitleAlign: 'center',
+                    headerStyle: {
+                        backgroundColor: theme.COLORS.PRIMARY,
+                    },
+                    headerTintColor: theme.COLORS.TEXT_BRAND,
+                    headerTitleStyle: {
+                        fontFamily: theme.FONTS.BOLD,
+                    },
+                    tabBarLabel: "MEUS DADOS",
+                    tabBarLabelStyle: {
+                        fontFamily: theme.FONTS.BOLD,
+                        fontSize: RFPercentage(1.8),
+                    },
+                    tabBarIcon: ({ color, size }) => {
+                        return <Ionicons name="md-person-circle-outline" size={RFPercentage(4)} color={color} />;
+                    }
+                }}
+            />
+            <HomeTabsBottomTabNavigator.Screen 
+                name="ContactScreen" 
+                component={ContactScreen} 
+                options={{
+                    headerTitle: 'FALE CONOSCO',
+                    headerTitleAlign: 'center',
+                    headerStyle: {
+                        backgroundColor: theme.COLORS.PRIMARY,
+                    },
+                    headerTintColor: theme.COLORS.TEXT_BRAND,
+                    headerTitleStyle: {
+                        fontFamily: theme.FONTS.BOLD,
+                    },
+                    tabBarLabel: "FALE CONOSCO",
+                    tabBarLabelStyle: {
+                        fontFamily: theme.FONTS.BOLD,
+                        fontSize: RFPercentage(1.8),
+                    },
+                    tabBarIcon: ({ color, size }) => {
+                        return <Ionicons name="md-call-outline" size={RFPercentage(4)} color={color} />;
+                    }
+                }}
+            />
+            <HomeTabsBottomTabNavigator.Screen 
+                name="HelpScreen" 
+                component={HelpScreen} 
+                options={{
+                    headerTitle: 'FAQ',
+                    headerTitleAlign: 'center',
+                    headerStyle: {
+                        backgroundColor: theme.COLORS.PRIMARY,
+                    },
+                    headerTintColor: theme.COLORS.TEXT_BRAND,
+                    headerTitleStyle: {
+                        fontFamily: theme.FONTS.BOLD,
+                    },
+                    tabBarLabel: "AJUDA",
+                    tabBarLabelStyle: {
+                        fontFamily: theme.FONTS.BOLD,
+                        fontSize: RFPercentage(1.8),
+                    },
+                    tabBarIcon: ({ color, size }) => {
+                        return <Ionicons name="md-help-outline" size={RFPercentage(4)} color={color} />;
+                    }
+                }}
+            />
+        </HomeTabsBottomTabNavigator.Navigator>
+    );
+
+}
+function App(){
     return(
+        <Stack.Navigator>
+            <Stack.Screen 
+                name="Home" 
+                component={HomeTabs}
+                options={{
+                    headerShown: false,
+                }}
+            />
+            <Stack.Screen 
+                name="NewOrderScreen" 
+                component={NewOrderScreen} 
+                options={{
+                    headerTitle: 'MONTE SEU CARRINHOç',
+                    headerTitleAlign: 'center',
+                    headerStyle: {
+                        backgroundColor: theme.COLORS.PRIMARY,
+                    },
+                    headerTintColor: theme.COLORS.TEXT_BRAND,
+                    headerTitleStyle: {
+                        fontFamily: theme.FONTS.BOLD,
+                    },
+                    tabBarLabel: "MEUS DADOS",
+                    tabBarLabelStyle: {
+                        fontFamily: theme.FONTS.BOLD,
+                        fontSize: RFPercentage(1.8),
+                    },
+                    tabBarIcon: ({ color, size }) => {
+                        return <Ionicons name="md-person-outline" size={RFPercentage(4)} color={color} />;
+                    }
+                }}
+            />
+            <Stack.Screen 
+                name="UpdateProfileScreen"
+                component={UpdateProfileScreen}
+                options={{
+                    headerTitle: 'ATUALIZAR PERFIL',
+                    headerTitleAlign: 'center',
+                    headerBackTitleVisible: false,
+                    headerStyle: {
+                        backgroundColor: theme.COLORS.PRIMARY,
+                    },
+                    headerTintColor: theme.COLORS.TEXT_BRAND,
+                    headerTitleStyle: {
+                        fontFamily: theme.FONTS.BOLD,
+                        fontSize: RFPercentage(2.3),
+                    }
+                }}
+            />
+        </Stack.Navigator>
+    );
+}
+
+function AccountStack() {
+    return (
         <AccountStackNavigator.Navigator
             initialRouteName="AccountScreen"
         >
-            <AccountStackNavigator.Screen 
+            <AccountStackNavigator.Screen
                 name="AccountScreen"
                 component={AccountScreen}
                 options={{
@@ -45,7 +197,7 @@ function AccountStack(){
                     }
                 }}
             />
-            <AccountStackNavigator.Screen 
+            <AccountStackNavigator.Screen
                 name="OrderHistoryScreen"
                 component={OrderHistoryScreen}
                 options={{
@@ -62,7 +214,7 @@ function AccountStack(){
                     }
                 }}
             />
-            <AccountStackNavigator.Screen 
+            <AccountStackNavigator.Screen
                 name="PrivatePolicyScreen"
                 component={PrivatePolicyScreen}
                 options={{
@@ -79,7 +231,7 @@ function AccountStack(){
                     }
                 }}
             />
-            <AccountStackNavigator.Screen 
+            <AccountStackNavigator.Screen
                 name="HelpScreen"
                 component={HelpScreen}
                 options={{
@@ -96,7 +248,7 @@ function AccountStack(){
                     }
                 }}
             />
-            <AccountStackNavigator.Screen 
+            <AccountStackNavigator.Screen
                 name="UpdateProfileScreen"
                 component={UpdateProfileScreen}
                 options={{
@@ -117,12 +269,12 @@ function AccountStack(){
     );
 }
 
-function NewOrderStack(){
+function NewOrderStack() {
     return (
         <NewOrderStackNavigator.Navigator
             initialRouteName="NewOrderScreen"
         >
-            <NewOrderStackNavigator.Screen 
+            <NewOrderStackNavigator.Screen
                 name="NewOrderScreen"
                 component={NewOrderScreen}
             />
@@ -141,89 +293,23 @@ function MyTabs() {
             <Tab.Screen
                 name="Home"
                 component={Home}
-                options={{
-                    headerShown: false,
-                    tabBarLabel: "INÍCIO",
-                    tabBarLabelStyle:{
-                        fontFamily: theme.FONTS.BOLD,
-                        fontSize: RFPercentage(1.8),
-                    },
-                    tabBarIcon: ({color, size}) =>{
-                        return <Ionicons name="md-home-outline" size={RFPercentage(4)} color={color} />;
-                    }
-                }}
+                
             >
             </Tab.Screen>
             <Tab.Screen
                 name="NewOrder"
                 component={NewOrderStack}
-                options={{
-                    headerShown: false,
-                    headerTitle: 'MEUS CartStack',
-                    headerTitleAlign: 'center',
-                    headerStyle: {
-                        backgroundColor: theme.COLORS.PRIMARY,
-                    },
-                    headerTintColor: theme.COLORS.TEXT_BRAND,
-                    headerTitleStyle: {
-                        fontFamily: theme.FONTS.BOLD,
-                    },
-                    tabBarLabel: "MEUS DADOS",
-                    tabBarLabelStyle:{
-                        fontFamily: theme.FONTS.BOLD,
-                        fontSize: RFPercentage(1.8),
-                    },
-                    tabBarIcon: ({color, size}) =>{
-                        return <Ionicons name="md-person-outline" size={RFPercentage(4)} color={color} />;
-                    }
-                }}
+                
             ></Tab.Screen>
             <Tab.Screen
                 name="Account"
                 component={AccountStack}
-                options={{
-                    headerShown: false,
-                    headerTitle: 'MEUS DADOS',
-                    headerTitleAlign: 'center',
-                    headerStyle: {
-                        backgroundColor: theme.COLORS.PRIMARY,
-                    },
-                    headerTintColor: theme.COLORS.TEXT_BRAND,
-                    headerTitleStyle: {
-                        fontFamily: theme.FONTS.BOLD,
-                    },
-                    tabBarLabel: "MEUS DADOS",
-                    tabBarLabelStyle:{
-                        fontFamily: theme.FONTS.BOLD,
-                        fontSize: RFPercentage(1.8),
-                    },
-                    tabBarIcon: ({color, size}) =>{
-                        return <Ionicons name="md-person-circle-outline" size={RFPercentage(4)} color={color} />;
-                    }
-                }}
+                
             ></Tab.Screen>
             <Tab.Screen
                 name="ContactScreen"
                 component={ContactScreen}
-                options={{
-                    headerTitle: 'FALE CONOSCO',
-                    headerTitleAlign: 'center',
-                    headerStyle: {
-                        backgroundColor: theme.COLORS.PRIMARY,
-                    },
-                    headerTintColor: theme.COLORS.TEXT_BRAND,
-                    headerTitleStyle: {
-                        fontFamily: theme.FONTS.BOLD,
-                    },
-                    tabBarLabel: "FALE CONOSCO",
-                    tabBarLabelStyle:{
-                        fontFamily: theme.FONTS.BOLD,
-                        fontSize: RFPercentage(1.8),
-                    },
-                    tabBarIcon: ({color, size}) =>{
-                        return <Ionicons name="md-call-outline" size={RFPercentage(4)} color={color} />;
-                    }
-                }}
+                
             ></Tab.Screen>
         </Tab.Navigator>
     );
@@ -233,7 +319,7 @@ function MyTabs() {
 export default function Navigation() {
     return (
         <NavigationContainer>
-            <MyTabs />
+            <App />
         </NavigationContainer>
     );
 }
